@@ -255,8 +255,7 @@
                                  }];
 }
 
-
-#pragma mark - custom methods
+#pragma mark - private places
 // to-do this is method to create a private place
 //  so that we don't have to use the Gimbal Server? must verify this
 -(void)createPlace
@@ -311,7 +310,7 @@
                                           success:^{
                                               // do something after place has been deleted
                                           } failure:^(NSError *error) {
-                                                // failed with statuscode
+                                              // failed with statuscode
                                           }];
 }
 
@@ -324,6 +323,7 @@
         // failed withs tatus code
     }];
 }
+
 
 
 @end
