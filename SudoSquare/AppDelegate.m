@@ -7,12 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import <ContextCore/QLPushNotificationsConnector.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [QLPushNotificationsConnector didFinishLaunchingWithOptions:launchOptions];
+    [QLPushNotificationsConnector registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
+    
     return YES;
 }
 							
@@ -31,6 +36,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -42,5 +48,17 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - Gimbal SDK related Methods
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    [QLPushNotificationsConnector didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    [UIApplication sharedApplication].applicationIconBadgeNumber++;
+}
+
 
 @end
