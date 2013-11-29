@@ -1,5 +1,5 @@
 # Created by http://gitignore.io
-
+Constants.h
 UserContext.plist
 
 ### OSX ###
