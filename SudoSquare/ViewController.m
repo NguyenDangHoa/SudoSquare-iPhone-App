@@ -11,6 +11,8 @@
 
 
 #import <ContextLocation/QLPlace.h>
+#import <ContextLocation/QLGeoFenceCircle.h>
+#import <ContextLocation/QLPlaceAttributes.h>
 #import <ContextLocation/QLPlaceEvent.h>
 #import <ContextLocation/QLContentDescriptor.h>
 
@@ -21,6 +23,10 @@
 -(void)displayLastKnownPlaceEvent;
 -(void)savePlaceEvent:(QLPlaceEvent *)placeEvent;
 -(void)displaceLastKnownContentDescriptor;
+
+// private places
+-(void)createPlace;             // to-do - make a button for user to create their marker
+-(void)allPlacesAndOnSuccess;
 
 @end
 
@@ -33,6 +39,7 @@
     
     self.title = @"SudoSquare";
     
+    // QLContextCoreConnector must be enabled prior to using any other features
     self.contextCoreConnector = [[QLContextCoreConnector alloc] init];
     self.contextCoreConnector.permissionsDelegate = self;
     
@@ -98,6 +105,7 @@
 
 -(IBAction)enableSDK:(id)sender
 {
+    // notes: enableFromViewController: is asynchronous
     [_contextCoreConnector enableFromViewController:self.navigationController
                                             success:^{
                                                 _enableSDKButton.enabled = NO;
@@ -244,5 +252,42 @@
                                  }];
 }
 
+
+#pragma mark - custom methods
+// to-do this is method to create a private place
+//  so that we don't have to use the Gimbal Server? must verify this
+-(void)createPlace
+{
+    QLPlace *place = [[QLPlace alloc] init];
+    place.name = @"Home";
+    // to-do - get more accurate ll + make this a polygon
+    QLGeoFenceCircle *circle = [[QLGeoFenceCircle alloc] init];
+    circle.latitude = 37.810869;
+    circle.longitude = -122.267532;
+    circle.radius = 10;
+    place.geoFence = circle;
+    
+    NSMutableDictionary *placeAttributesDictionary = [[NSMutableDictionary alloc] init];
+    [placeAttributesDictionary setValue:@"TYPE" forKey:@"SudoSquare"];
+    
+    QLPlaceAttributes *placeAttributes = [[QLPlaceAttributes alloc] initWithPlaceAttributes:placeAttributesDictionary];
+    [place setPlaceAttributes:placeAttributes];
+    
+    [self.contextPlaceConnector createPlace:place success:^(QLPlace *place) {
+        // do something after place was created succesfully
+    } failure:^(NSError *error) {
+        // failed with status code
+    }];
+}
+
+-(void)allPlacesAndOnSuccess
+{
+    [self.contextPlaceConnector allPlacesAndOnSuccess:^(NSArray *places) {
+        // do something after places were retrieved
+    } failure:^(NSError *error) {
+        
+        // failed with status code
+    }];
+}
 @end
 
