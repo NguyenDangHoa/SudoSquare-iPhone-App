@@ -37,6 +37,7 @@
 		1CB5046718484FD30079EBE3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5046618484FD30079EBE3 /* CoreBluetooth.framework */; };
 		1CB5046918484FF50079EBE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5046818484FF50079EBE3 /* README.md */; };
 		1CB5046B184850170079EBE3 /* UserContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5046A184850170079EBE3 /* UserContext.plist */; };
+		1CB5046E184852D10079EBE3 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5046D184852D10079EBE3 /* ContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		1CB5046618484FD30079EBE3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		1CB5046818484FF50079EBE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1CB5046A184850170079EBE3 /* UserContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserContext.plist; path = ../UserContext.plist; sourceTree = "<group>"; };
+		1CB5046C184852D10079EBE3 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		1CB5046D184852D10079EBE3 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				1CB5041F18484F130079EBE3 /* Main.storyboard */,
 				1CB5042218484F130079EBE3 /* ViewController.h */,
 				1CB5042318484F130079EBE3 /* ViewController.m */,
+				1CB5046C184852D10079EBE3 /* ContentViewController.h */,
+				1CB5046D184852D10079EBE3 /* ContentViewController.m */,
 				1CB5041418484F130079EBE3 /* Supporting Files */,
 			);
 			path = SudoSquare;
@@ -393,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB5046E184852D10079EBE3 /* ContentViewController.m in Sources */,
 				1CB5042418484F130079EBE3 /* ViewController.m in Sources */,
 				1CB5041E18484F130079EBE3 /* AppDelegate.m in Sources */,
 				1CB5041A18484F130079EBE3 /* main.m in Sources */,
