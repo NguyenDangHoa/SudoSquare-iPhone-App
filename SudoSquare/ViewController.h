@@ -24,7 +24,7 @@
 
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *placeNameLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet UIBarButtonItem *enableSDKButton;
-@property (unsafe_unretained, nonatomic) IBOutlet UILabel *contentInfoLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *sudoMessageLabel;
 
 -(IBAction)enableSDK:(id)sender;
 -(IBAction)showPermissions:(id)sender;

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  SudoSquare
+
+  Created by Romy Ilano on 11/28/13.
+  Copyright (c) 2013 Romy Ilano. All rights reserved.
+*/
+
+"LOCATION_PERMISSION_TURNED_OFF" = "Location Permission Turned off by user";

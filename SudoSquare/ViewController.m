@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "ContentViewController.h"
 
+
 #import <ContextLocation/QLPlace.h>
 #import <ContextLocation/QLPlaceEvent.h>
+#import <ContextLocation/QLContentDescriptor.h>
+
+#import <ContextProfiling/PRProfile.h>
 
 @interface ViewController ()
 
@@ -21,37 +25,29 @@
 @end
 
 @implementation ViewController
--(id)init
-{
-    self = [super init];
-    
-    if (self)
-    {
-        self.title = @"SudoSquare";
-        
-        self.contextCoreConnector = [[QLContextCoreConnector alloc] init];
-        self.contextCoreConnector.permissionsDelegate = self;
-        
-        self.contextPlaceConnector = [[QLContextPlaceConnector alloc] init];
-        self.contextPlaceConnector.delegate = self;
-        
-        self.contextInterestsConnector = [[PRContextInterestsConnector alloc] init];
-        self.contextInterestsConnector.delegate = self;
-        
-        NSLog(@"Initializing connector");
-        
-        self.contentConnector = [[QLContentConnector alloc] init];
-        self.contentConnector.delegate = self;
-        
-    }
-    
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"SudoSquare";
+    
+    self.contextCoreConnector = [[QLContextCoreConnector alloc] init];
+    self.contextCoreConnector.permissionsDelegate = self;
+    
+    self.contextPlaceConnector = [[QLContextPlaceConnector alloc] init];
+    self.contextPlaceConnector.delegate = self;
+    
+    self.contextInterestsConnector = [[PRContextInterestsConnector alloc] init];
+    self.contextInterestsConnector.delegate = self;
+    
+    NSLog(@"Initializing connector");
+    
+    self.contentConnector = [[QLContentConnector alloc] init];
+    self.contentConnector.delegate = self;
+
+    //
   
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
@@ -75,7 +71,7 @@
         {
             _enableSDKButton.enabled = YES;
             self.placeNameLabel.text = nil;
-            self.contentInfoLabel.text = nil;
+            self.sudoMessageLabel.text = nil;
         }
     }];
 
@@ -87,7 +83,7 @@
     
     [self setEnableSDKButton:nil];
     [self setPlaceNameLabel:nil];
-    [self setContentInfoLabel:nil];
+    [self setSudoMessageLabel:nil];
     
 }
 
@@ -131,15 +127,121 @@
 {
     NSString *placeTitle = nil;
     
-    switch (placeEvent.placeType) {
-        case <#constant#>:
-            <#statements#>
+    switch (placeEvent.eventType)
+    {
+        case QLPlaceEventTypeAt:
+            placeTitle = [NSString stringWithFormat:@"At %@", placeEvent.place.name];
             break;
-            
-        default:
+        case QLPlaceEventTypeLeft:
+            placeTitle = [NSString stringWithFormat:@"Left %@", placeEvent.place.name];
             break;
     }
+    [[NSUserDefaults standardUserDefaults] setObject:placeTitle
+                                              forKey:@"PlaceEventKey"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)displaceLastKnownContentDescriptor
+{
+    [self.contextPlaceConnector requestContentHistoryAndOnSuccess:^(NSArray *contentHistories) {
+        if ([contentHistories count] > 0)
+        {
+            QLContentDescriptor *lastKnownContentDescriptor = [contentHistories objectAtIndex:0];
+            self.sudoMessageLabel.text = lastKnownContentDescriptor.title;
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"Failed to fetch content: %@", [error localizedDescription]);
+    }];
+}
+
+-(void)postOneContentDescriptorLocalNotification:(QLContentDescriptor *)contentDescriptor
+{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertAction = NSLocalizedString(@"Foo", nil);
+    localNotification.alertBody = [NSString stringWithFormat:@"%@", contentDescriptor.title];
     
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
+#pragma mark - QLContextCorePermissionsDelegate Methods
+-(void)subscriptionPermissionDidChange:(BOOL)subscriptionPermission
+{
+     if (subscriptionPermission)
+     {
+         if (_contextPlaceConnector.isPlacesEnabled)
+         {
+             [self displayLastKnownPlaceEvent];
+         }
+         else
+         {
+             self.placeNameLabel.text = @"";
+             
+         }
+         _enableSDKButton.enabled = NO;
+     }
+    else
+    {
+        self.placeNameLabel.text = @"";
+        self.sudoMessageLabel.text = @"";
+        [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+       [self.contextCoreConnector checkStatusAndOnEnabled:NULL
+                                                 disabled:^(NSError *error) {
+                                                     _enableSDKButton.enabled = YES;
+       }];
+    }
+}
+
+#pragma mark - QLContextPlaceConnectorDelegate Methods
+-(void)didGetPlaceEvent:(QLPlaceEvent *)placeEvent
+{
+    NSLog(@"Got place event");
+    [self savePlaceEvent:placeEvent];
+    [self displayLastKnownPlaceEvent];
+}
+
+-(void)didGetContentDescriptors:(NSArray *)contentDescriptors
+{
+    self.sudoMessageLabel.text = [[contentDescriptors lastObject] title];
+    
+    [self displaceLastKnownContentDescriptor];
+    
+    for (QLContentDescriptor *contentDescriptor in contentDescriptors)
+    {
+        [self postOneContentDescriptorLocalNotification:contentDescriptor];
+    }
+}
+
+-(void)placesPermissionDidChange:(BOOL)placesPermission
+{
+    if (placesPermission)
+    {
+        [self displayLastKnownPlaceEvent];
+        [self displaceLastKnownContentDescriptor];
+    }
+    else
+    {
+        self.placeNameLabel.text = NSLocalizedString(@"LOCATION_PERMISSION_TURNED_OFF", @"permission turned off for user");
+        self.sudoMessageLabel.text = @"";
+    }
+}
+
+-(void)didReceiveNotification:(QLContentNotification *)notification appState:(QLNotificationAppState)appState
+{
+    NSLog(@"SudoSquare: didReceiveNotification: %@ - %d", notification.message, appState);
+    
+    [self.contentConnector contentWithId:notification.contentId
+                                 success:^(QLContent *content) {
+                                     NSLog(@"requestContentForID: success: %@", content.title);
+                                     
+                                     ContentViewController *contentViewController = [[ContentViewController alloc] init];
+                                     contentViewController.content = content;
+                                     
+                                     // to-do make this a storyboard segue
+                                     [self.navigationController presentViewController:contentViewController animated:YES completion:nil];
+                                     
+                                 } failure:^(NSError *error) {
+                                     NSLog(@"requestContentForID: error: %@", error);
+                                 }];
 }
 
 @end

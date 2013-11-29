@@ -38,6 +38,7 @@
 		1CB5046918484FF50079EBE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5046818484FF50079EBE3 /* README.md */; };
 		1CB5046B184850170079EBE3 /* UserContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5046A184850170079EBE3 /* UserContext.plist */; };
 		1CB5046E184852D10079EBE3 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5046D184852D10079EBE3 /* ContentViewController.m */; };
+		1CB50470184862330079EBE3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5046F184862330079EBE3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		1CB5046A184850170079EBE3 /* UserContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserContext.plist; path = ../UserContext.plist; sourceTree = "<group>"; };
 		1CB5046C184852D10079EBE3 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		1CB5046D184852D10079EBE3 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		1CB5046F184862330079EBE3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				1CB5042318484F130079EBE3 /* ViewController.m */,
 				1CB5046C184852D10079EBE3 /* ContentViewController.h */,
 				1CB5046D184852D10079EBE3 /* ContentViewController.m */,
+				1CB5046F184862330079EBE3 /* Localizable.strings */,
 				1CB5041418484F130079EBE3 /* Supporting Files */,
 			);
 			path = SudoSquare;
@@ -378,6 +381,7 @@
 				1CB5042618484F130079EBE3 /* Images.xcassets in Resources */,
 				1CB5041818484F130079EBE3 /* InfoPlist.strings in Resources */,
 				1CB5042118484F130079EBE3 /* Main.storyboard in Resources */,
+				1CB50470184862330079EBE3 /* Localizable.strings in Resources */,
 				1CB5045718484F290079EBE3 /* DataModels.bundle in Resources */,
 				1CB5045918484F290079EBE3 /* rules.txt in Resources */,
 			);

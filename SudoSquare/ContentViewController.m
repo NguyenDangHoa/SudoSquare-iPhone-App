@@ -7,6 +7,7 @@
 //
 
 #import "ContentViewController.h"
+#import <ContextCore/QLContent.h>
 
 @interface ContentViewController ()
 
@@ -27,12 +28,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationBar.topItem.title = self.content.title;
+    
+    self.descLabel.text = self.content.contentDescription;
+    self.urlLabel.text = self.content.contentUrl;
+    self.expiresLabel.text = self.content.expires.description;
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)donePressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end
