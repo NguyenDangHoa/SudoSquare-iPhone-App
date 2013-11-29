@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CB5040E18484F120079EBE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5040D18484F120079EBE3 /* Foundation.framework */; };
+		1CB5041018484F120079EBE3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5040F18484F120079EBE3 /* CoreGraphics.framework */; };
+		1CB5041218484F120079EBE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5041118484F120079EBE3 /* UIKit.framework */; };
+		1CB5041818484F130079EBE3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5041618484F130079EBE3 /* InfoPlist.strings */; };
+		1CB5041A18484F130079EBE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5041918484F130079EBE3 /* main.m */; };
+		1CB5041E18484F130079EBE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5041D18484F130079EBE3 /* AppDelegate.m */; };
+		1CB5042118484F130079EBE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5041F18484F130079EBE3 /* Main.storyboard */; };
+		1CB5042418484F130079EBE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5042318484F130079EBE3 /* ViewController.m */; };
+		1CB5042618484F130079EBE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5042518484F130079EBE3 /* Images.xcassets */; };
+		1CB5042D18484F130079EBE3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5042C18484F130079EBE3 /* XCTest.framework */; };
+		1CB5042E18484F130079EBE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5040D18484F120079EBE3 /* Foundation.framework */; };
+		1CB5042F18484F130079EBE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5041118484F120079EBE3 /* UIKit.framework */; };
+		1CB5043718484F130079EBE3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5043518484F130079EBE3 /* InfoPlist.strings */; };
+		1CB5043918484F130079EBE3 /* SudoSquareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5043818484F130079EBE3 /* SudoSquareTests.m */; };
+		1CB5045418484F280079EBE3 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5044318484F280079EBE3 /* Common.framework */; };
+		1CB5045518484F280079EBE3 /* ContextCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5044618484F280079EBE3 /* ContextCore.framework */; };
+		1CB5045618484F280079EBE3 /* ContextLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5044918484F280079EBE3 /* ContextLocation.framework */; };
+		1CB5045718484F290079EBE3 /* DataModels.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5044B18484F280079EBE3 /* DataModels.bundle */; };
+		1CB5045818484F290079EBE3 /* ContextProfiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5044D18484F280079EBE3 /* ContextProfiling.framework */; };
+		1CB5045918484F290079EBE3 /* rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5044F18484F280079EBE3 /* rules.txt */; };
+		1CB5045A18484F290079EBE3 /* FYX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5045018484F280079EBE3 /* FYX.framework */; };
+		1CB5045B18484F290079EBE3 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5045218484F280079EBE3 /* NetworkServices.framework */; };
+		1CB5045D18484F470079EBE3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5045C18484F470079EBE3 /* CoreLocation.framework */; };
+		1CB5045F18484F5E0079EBE3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5045E18484F5E0079EBE3 /* MapKit.framework */; };
+		1CB5046118484FAB0079EBE3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5046018484FAB0079EBE3 /* Security.framework */; };
+		1CB5046318484FB10079EBE3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5046218484FB10079EBE3 /* CoreData.framework */; };
+		1CB5046518484FB80079EBE3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5046418484FB80079EBE3 /* libz.dylib */; };
+		1CB5046718484FD30079EBE3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB5046618484FD30079EBE3 /* CoreBluetooth.framework */; };
+		1CB5046918484FF50079EBE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5046818484FF50079EBE3 /* README.md */; };
+		1CB5046B184850170079EBE3 /* UserContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5046A184850170079EBE3 /* UserContext.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CB5043018484F130079EBE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CB5040218484F120079EBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CB5040918484F120079EBE3;
+			remoteInfo = SudoSquare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CB5040A18484F120079EBE3 /* SudoSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB5040D18484F120079EBE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1CB5040F18484F120079EBE3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1CB5041118484F120079EBE3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1CB5041518484F130079EBE3 /* SudoSquare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SudoSquare-Info.plist"; sourceTree = "<group>"; };
+		1CB5041718484F130079EBE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CB5041918484F130079EBE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CB5041B18484F130079EBE3 /* SudoSquare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SudoSquare-Prefix.pch"; sourceTree = "<group>"; };
+		1CB5041C18484F130079EBE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1CB5041D18484F130079EBE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1CB5042018484F130079EBE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CB5042218484F130079EBE3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1CB5042318484F130079EBE3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1CB5042518484F130079EBE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1CB5042B18484F130079EBE3 /* SudoSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB5042C18484F130079EBE3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1CB5043418484F130079EBE3 /* SudoSquareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SudoSquareTests-Info.plist"; sourceTree = "<group>"; };
+		1CB5043618484F130079EBE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CB5043818484F130079EBE3 /* SudoSquareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudoSquareTests.m; sourceTree = "<group>"; };
+		1CB5044318484F280079EBE3 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Common.framework; sourceTree = "<group>"; };
+		1CB5044618484F280079EBE3 /* ContextCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextCore.framework; sourceTree = "<group>"; };
+		1CB5044918484F280079EBE3 /* ContextLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextLocation.framework; sourceTree = "<group>"; };
+		1CB5044B18484F280079EBE3 /* DataModels.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DataModels.bundle; sourceTree = "<group>"; };
+		1CB5044D18484F280079EBE3 /* ContextProfiling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextProfiling.framework; sourceTree = "<group>"; };
+		1CB5044F18484F280079EBE3 /* rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rules.txt; sourceTree = "<group>"; };
+		1CB5045018484F280079EBE3 /* FYX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FYX.framework; sourceTree = "<group>"; };
+		1CB5045218484F280079EBE3 /* NetworkServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = "<group>"; };
+		1CB5045C18484F470079EBE3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1CB5045E18484F5E0079EBE3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1CB5046018484FAB0079EBE3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1CB5046218484FB10079EBE3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1CB5046418484FB80079EBE3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1CB5046618484FD30079EBE3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1CB5046818484FF50079EBE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1CB5046A184850170079EBE3 /* UserContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserContext.plist; path = ../UserContext.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CB5040718484F120079EBE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB5046718484FD30079EBE3 /* CoreBluetooth.framework in Frameworks */,
+				1CB5046518484FB80079EBE3 /* libz.dylib in Frameworks */,
+				1CB5046318484FB10079EBE3 /* CoreData.framework in Frameworks */,
+				1CB5046118484FAB0079EBE3 /* Security.framework in Frameworks */,
+				1CB5045F18484F5E0079EBE3 /* MapKit.framework in Frameworks */,
+				1CB5045D18484F470079EBE3 /* CoreLocation.framework in Frameworks */,
+				1CB5045A18484F290079EBE3 /* FYX.framework in Frameworks */,
+				1CB5045B18484F290079EBE3 /* NetworkServices.framework in Frameworks */,
+				1CB5041018484F120079EBE3 /* CoreGraphics.framework in Frameworks */,
+				1CB5045418484F280079EBE3 /* Common.framework in Frameworks */,
+				1CB5045818484F290079EBE3 /* ContextProfiling.framework in Frameworks */,
+				1CB5041218484F120079EBE3 /* UIKit.framework in Frameworks */,
+				1CB5045618484F280079EBE3 /* ContextLocation.framework in Frameworks */,
+				1CB5045518484F280079EBE3 /* ContextCore.framework in Frameworks */,
+				1CB5040E18484F120079EBE3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB5042818484F130079EBE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB5042D18484F130079EBE3 /* XCTest.framework in Frameworks */,
+				1CB5042F18484F130079EBE3 /* UIKit.framework in Frameworks */,
+				1CB5042E18484F130079EBE3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CB5040118484F120079EBE3 = {
+			isa = PBXGroup;
+			children = (
+				1CB5046818484FF50079EBE3 /* README.md */,
+				1CB5041318484F120079EBE3 /* SudoSquare */,
+				1CB5043218484F130079EBE3 /* SudoSquareTests */,
+				1CB5040C18484F120079EBE3 /* Frameworks */,
+				1CB5040B18484F120079EBE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CB5040B18484F120079EBE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5040A18484F120079EBE3 /* SudoSquare.app */,
+				1CB5042B18484F130079EBE3 /* SudoSquareTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CB5040C18484F120079EBE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5046618484FD30079EBE3 /* CoreBluetooth.framework */,
+				1CB5046418484FB80079EBE3 /* libz.dylib */,
+				1CB5046218484FB10079EBE3 /* CoreData.framework */,
+				1CB5046018484FAB0079EBE3 /* Security.framework */,
+				1CB5045E18484F5E0079EBE3 /* MapKit.framework */,
+				1CB5045C18484F470079EBE3 /* CoreLocation.framework */,
+				1CB5044218484F280079EBE3 /* Common.embeddedframework */,
+				1CB5044518484F280079EBE3 /* ContextCore.embeddedframework */,
+				1CB5044818484F280079EBE3 /* ContextLocation.embeddedframework */,
+				1CB5044C18484F280079EBE3 /* ContextProfiling.embeddedframework */,
+				1CB5045018484F280079EBE3 /* FYX.framework */,
+				1CB5045118484F280079EBE3 /* NetworkServices.embeddedframework */,
+				1CB5040D18484F120079EBE3 /* Foundation.framework */,
+				1CB5040F18484F120079EBE3 /* CoreGraphics.framework */,
+				1CB5041118484F120079EBE3 /* UIKit.framework */,
+				1CB5042C18484F130079EBE3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CB5041318484F120079EBE3 /* SudoSquare */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5041C18484F130079EBE3 /* AppDelegate.h */,
+				1CB5041D18484F130079EBE3 /* AppDelegate.m */,
+				1CB5041F18484F130079EBE3 /* Main.storyboard */,
+				1CB5042218484F130079EBE3 /* ViewController.h */,
+				1CB5042318484F130079EBE3 /* ViewController.m */,
+				1CB5041418484F130079EBE3 /* Supporting Files */,
+			);
+			path = SudoSquare;
+			sourceTree = "<group>";
+		};
+		1CB5041418484F130079EBE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5042518484F130079EBE3 /* Images.xcassets */,
+				1CB5046A184850170079EBE3 /* UserContext.plist */,
+				1CB5041518484F130079EBE3 /* SudoSquare-Info.plist */,
+				1CB5041618484F130079EBE3 /* InfoPlist.strings */,
+				1CB5041918484F130079EBE3 /* main.m */,
+				1CB5041B18484F130079EBE3 /* SudoSquare-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CB5043218484F130079EBE3 /* SudoSquareTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5043818484F130079EBE3 /* SudoSquareTests.m */,
+				1CB5043318484F130079EBE3 /* Supporting Files */,
+			);
+			path = SudoSquareTests;
+			sourceTree = "<group>";
+		};
+		1CB5043318484F130079EBE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5043418484F130079EBE3 /* SudoSquareTests-Info.plist */,
+				1CB5043518484F130079EBE3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CB5044218484F280079EBE3 /* Common.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5044318484F280079EBE3 /* Common.framework */,
+				1CB5044418484F280079EBE3 /* Resources */,
+			);
+			path = Common.embeddedframework;
+			sourceTree = "<group>";
+		};
+		1CB5044418484F280079EBE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1CB5044518484F280079EBE3 /* ContextCore.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5044618484F280079EBE3 /* ContextCore.framework */,
+				1CB5044718484F280079EBE3 /* Resources */,
+			);
+			path = ContextCore.embeddedframework;
+			sourceTree = "<group>";
+		};
+		1CB5044718484F280079EBE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1CB5044818484F280079EBE3 /* ContextLocation.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5044918484F280079EBE3 /* ContextLocation.framework */,
+				1CB5044A18484F280079EBE3 /* Resources */,
+			);
+			path = ContextLocation.embeddedframework;
+			sourceTree = "<group>";
+		};
+		1CB5044A18484F280079EBE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5044B18484F280079EBE3 /* DataModels.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1CB5044C18484F280079EBE3 /* ContextProfiling.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5044D18484F280079EBE3 /* ContextProfiling.framework */,
+				1CB5044E18484F280079EBE3 /* Resources */,
+			);
+			path = ContextProfiling.embeddedframework;
+			sourceTree = "<group>";
+		};
+		1CB5044E18484F280079EBE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5044F18484F280079EBE3 /* rules.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1CB5045118484F280079EBE3 /* NetworkServices.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5045218484F280079EBE3 /* NetworkServices.framework */,
+				1CB5045318484F280079EBE3 /* Resources */,
+			);
+			path = NetworkServices.embeddedframework;
+			sourceTree = "<group>";
+		};
+		1CB5045318484F280079EBE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CB5040918484F120079EBE3 /* SudoSquare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CB5043C18484F130079EBE3 /* Build configuration list for PBXNativeTarget "SudoSquare" */;
+			buildPhases = (
+				1CB5040618484F120079EBE3 /* Sources */,
+				1CB5040718484F120079EBE3 /* Frameworks */,
+				1CB5040818484F120079EBE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SudoSquare;
+			productName = SudoSquare;
+			productReference = 1CB5040A18484F120079EBE3 /* SudoSquare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CB5042A18484F130079EBE3 /* SudoSquareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CB5043F18484F130079EBE3 /* Build configuration list for PBXNativeTarget "SudoSquareTests" */;
+			buildPhases = (
+				1CB5042718484F130079EBE3 /* Sources */,
+				1CB5042818484F130079EBE3 /* Frameworks */,
+				1CB5042918484F130079EBE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CB5043118484F130079EBE3 /* PBXTargetDependency */,
+			);
+			name = SudoSquareTests;
+			productName = SudoSquareTests;
+			productReference = 1CB5042B18484F130079EBE3 /* SudoSquareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CB5040218484F120079EBE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Romy Ilano";
+				TargetAttributes = {
+					1CB5042A18484F130079EBE3 = {
+						TestTargetID = 1CB5040918484F120079EBE3;
+					};
+				};
+			};
+			buildConfigurationList = 1CB5040518484F120079EBE3 /* Build configuration list for PBXProject "SudoSquare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CB5040118484F120079EBE3;
+			productRefGroup = 1CB5040B18484F120079EBE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CB5040918484F120079EBE3 /* SudoSquare */,
+				1CB5042A18484F130079EBE3 /* SudoSquareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CB5040818484F120079EBE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB5046918484FF50079EBE3 /* README.md in Resources */,
+				1CB5046B184850170079EBE3 /* UserContext.plist in Resources */,
+				1CB5042618484F130079EBE3 /* Images.xcassets in Resources */,
+				1CB5041818484F130079EBE3 /* InfoPlist.strings in Resources */,
+				1CB5042118484F130079EBE3 /* Main.storyboard in Resources */,
+				1CB5045718484F290079EBE3 /* DataModels.bundle in Resources */,
+				1CB5045918484F290079EBE3 /* rules.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB5042918484F130079EBE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB5043718484F130079EBE3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CB5040618484F120079EBE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB5042418484F130079EBE3 /* ViewController.m in Sources */,
+				1CB5041E18484F130079EBE3 /* AppDelegate.m in Sources */,
+				1CB5041A18484F130079EBE3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CB5042718484F130079EBE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB5043918484F130079EBE3 /* SudoSquareTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CB5043118484F130079EBE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CB5040918484F120079EBE3 /* SudoSquare */;
+			targetProxy = 1CB5043018484F130079EBE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1CB5041618484F130079EBE3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CB5041718484F130079EBE3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1CB5041F18484F130079EBE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CB5042018484F130079EBE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1CB5043518484F130079EBE3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CB5043618484F130079EBE3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CB5043A18484F130079EBE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1CB5043B18484F130079EBE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CB5043D18484F130079EBE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/Common.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/ContextCore.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/ContextLocation.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/ContextProfiling.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/NetworkServices.embeddedframework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SudoSquare/SudoSquare-Prefix.pch";
+				INFOPLIST_FILE = "SudoSquare/SudoSquare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1CB5043E18484F130079EBE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/Common.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/ContextCore.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/ContextLocation.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/ContextProfiling.embeddedframework",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare",
+					"/Users/romyilano/Developer/Projects/SudoRoom\\ Projects/SudoSquare/NetworkServices.embeddedframework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SudoSquare/SudoSquare-Prefix.pch";
+				INFOPLIST_FILE = "SudoSquare/SudoSquare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1CB5044018484F130079EBE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SudoSquare.app/SudoSquare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SudoSquare/SudoSquare-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SudoSquareTests/SudoSquareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1CB5044118484F130079EBE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SudoSquare.app/SudoSquare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SudoSquare/SudoSquare-Prefix.pch";
+				INFOPLIST_FILE = "SudoSquareTests/SudoSquareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CB5040518484F120079EBE3 /* Build configuration list for PBXProject "SudoSquare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB5043A18484F130079EBE3 /* Debug */,
+				1CB5043B18484F130079EBE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CB5043C18484F130079EBE3 /* Build configuration list for PBXNativeTarget "SudoSquare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB5043D18484F130079EBE3 /* Debug */,
+				1CB5043E18484F130079EBE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1CB5043F18484F130079EBE3 /* Build configuration list for PBXNativeTarget "SudoSquareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB5044018484F130079EBE3 /* Debug */,
+				1CB5044118484F130079EBE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CB5040218484F120079EBE3 /* Project object */;
+}
