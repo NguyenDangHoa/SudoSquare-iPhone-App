@@ -27,6 +27,9 @@
 // private places
 -(void)createPlace;             // to-do - make a button for user to create their marker
 -(void)allPlacesAndOnSuccess;
+-(void)updatePlace:(QLPlace *)existingPlace;
+-(void)deletePlace:(long long)existPlaceId;
+-(void)allPrivatePointOfInterestAndOnSuccess;
 
 @end
 
@@ -289,5 +292,39 @@
         // failed with status code
     }];
 }
+
+-(void)updatePlace:(QLPlace *)existingPlace
+{
+    existingPlace.name = @"New SudoSquare name";
+    
+    [self.contextPlaceConnector updatePlace:existingPlace
+                                    success:^(QLPlace *place) {
+                                        // do something after place update
+                                    } failure:^(NSError *error) {
+                                        // failed with statuscode
+                                    }];
+}
+
+-(void)deletePlace:(long long)existPlaceId
+{
+    [self.contextPlaceConnector deletePlaceWithId:existPlaceId
+                                          success:^{
+                                              // do something after place has been deleted
+                                          } failure:^(NSError *error) {
+                                                // failed with statuscode
+                                          }];
+}
+
+-(void)allPrivatePointOfInterestAndOnSuccess
+{
+    [self.contextPlaceConnector allPrivatePointsOfInterestAndOnSuccess:^(NSArray *privatePointsOfInterest) {
+        
+        // do something after top 20 private points were received
+    } failure:^(NSError *error) {
+        // failed withs tatus code
+    }];
+}
+
+
 @end
 
